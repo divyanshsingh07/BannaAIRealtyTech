@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
@@ -19,7 +19,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bitter', serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
 }
 
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-text {
-    font-family: 'Arvo', serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: #111827;
@@ -249,14 +249,25 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     padding: 16px 32px;
     font-size: 18px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     text-align: center;
+}
+
+.cta-button i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+    transform: translateX(2px);
 }
 
 .cta-button.primary {
@@ -774,7 +785,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     border-radius: 8px;
     padding: 0.5rem 0.875rem;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 600;
     transition: all 0.2s ease;
 }
@@ -980,7 +991,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.875rem 1rem;
     font-size: 0.95rem;
     color: #111827;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     transition: all 0.2s ease;
 }
 
@@ -1018,7 +1029,7 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     transition: all 0.2s ease;
     margin-top: 0.5rem;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .submit-pill:hover {
