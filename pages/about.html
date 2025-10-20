@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BannaAI RealtyTech</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            color: #111827;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-tagline {
+            font-size: 1.125rem;
+            color: #2563eb;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .about-content {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-section {
+            margin-bottom: 4rem;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #111827;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .about-section h3 {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-section p {
+            font-size: 1.125rem;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .about-section ul li {
+            font-size: 1.125rem;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            padding-left: 2.5rem;
+            position: relative;
+        }
+
+        .about-section ul li i {
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-size: 1.125rem;
+            margin-top: 0.15rem;
+        }
+
+        .highlight-quote {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 4px solid #2563eb;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .highlight-quote p {
+            font-size: 1.25rem;
+            color: #1e40af;
+            font-weight: 600;
+            font-style: italic;
+            margin: 0;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .value-card {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h4 {
+            font-size: 1.25rem;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .value-card p {
+            font-size: 1rem;
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-card {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            border-color: #2563eb;
+        }
+
+        .benefit-card h4 {
+            font-size: 1.125rem;
+            color: #111827;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .benefit-card h4 i {
+            color: #2563eb;
+        }
+
+        .benefit-card p {
+            font-size: 1rem;
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            padding: 4rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: #e0e7ff;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-btn.primary {
+            background: #ffffff;
+            color: #2563eb;
+        }
+
+        .cta-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .cta-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: #2563eb;
+            margin: 0 auto 2rem;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-section h2 {
+                font-size: 2rem;
+            }
+
+            .about-section h3 {
+                font-size: 1.5rem;
+            }
+
+            .about-section p,
+            .about-section ul li {
+                font-size: 1rem;
+            }
+
+            .highlight-quote p {
+                font-size: 1.125rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" class="logo-text">BannaAI</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html#home" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#roles" class="nav-link"><i class="fas fa-briefcase"></i> Roles</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About BannaAI RealtyTech Pvt. Ltd.</h1>
+            <p class="about-tagline">Future-Ready • Intelligent • Secure</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="about-container">
+            <!-- Who We Are -->
+            <div class="about-section">
+                <h2>Who We Are</h2>
+                <div class="section-divider"></div>
+                <p>BannaAI RealtyTech Pvt. Ltd. is an emerging AI-powered PropTech company redefining the way India perceives, manages, and invests in real estate.</p>
+                <p>We are building a unified digital infrastructure for every real estate asset — giving properties a secure digital identity and making ownership, valuation, and transactions transparent, traceable, and trustworthy.</p>
+                <div class="highlight-quote">
+                    <p>"Our vision is simple yet powerful — to make Indian real estate intelligent, efficient, and accessible to everyone."</p>
+                </div>
+            </div>
+
+            <!-- Our Vision -->
+            <div class="about-section">
+                <h2>Our Vision</h2>
+                <div class="section-divider"></div>
+                <p>We are on a mission to build India's first "Living, Learning Model of a City" — a dynamic system that continuously learns from real-world data.</p>
+                <p>By combining AI, geospatial intelligence, and data automation, we aim to bring clarity and accountability to one of India's most complex sectors — real estate.</p>
+                <p>Our goal is to empower developers, investors, and citizens with actionable insights that promote sustainable growth, smart urbanization, and transparent governance.</p>
+            </div>
+
+            <!-- Our Story -->
+            <div class="about-section">
+                <h2>Our Story</h2>
+                <div class="section-divider"></div>
+                <p>BannaAI RealtyTech was founded with a clear realization — while technology has transformed finance, healthcare, and education, real estate in India still lacks transparency and data intelligence.</p>
+                <p>We started this journey to bridge that gap. Our team of engineers, designers, and analysts is building next-generation PropTech tools that enable data-driven decisions — from property valuation and urban planning to AI-powered asset forecasting.</p>
+                <div class="highlight-quote">
+                    <p>"Real estate should not be a guessing game — it should be an intelligent system."</p>
+                </div>
+            </div>
+
+            <!-- What We Do -->
+            <div class="about-section">
+                <h2>What We Do</h2>
+                <div class="section-divider"></div>
+                <p>At BannaAI RealtyTech, we design and develop modular, cloud-native platforms that combine AI and automation to deliver real-time real estate insights.</p>
+                <p><strong>Our work includes:</strong></p>
+                <ul>
+                    <li><i class="fas fa-puzzle-piece"></i> Building modular systems for property analytics and valuation.</li>
+                    <li><i class="fas fa-globe"></i> Developing APIs and dashboards for data-driven decision-making.</li>
+                    <li><i class="fas fa-robot"></i> Integrating ML forecasting, GIS visualization, and tokenization frameworks with a privacy-first architecture.</li>
+                    <li><i class="fas fa-cloud"></i> Designing scalable infrastructure to handle city-wide real estate data efficiently and securely.</li>
+                </ul>
+                <p>Through these innovations, we aim to make India's property market transparent, fair, and digitally intelligent.</p>
+            </div>
+
+            <!-- Why We Built This -->
+            <div class="about-section">
+                <h2>Why We Built This</h2>
+                <div class="section-divider"></div>
+                <p>We built BannaAI RealtyTech to solve the challenges every Indian faces in real estate — inaccurate valuations, opaque ownership, and fragmented data.</p>
+                <p>Our platform transforms this chaos into clarity through AI-driven intelligence and secure digital verification.</p>
+                <p>By digitizing assets and enabling data transparency, we are helping India move toward a smart, sustainable, and equitable real-estate future.</p>
+            </div>
+
+            <!-- How It Helps -->
+            <div class="about-section">
+                <h2>How It Helps</h2>
+                <div class="section-divider"></div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-building"></i> For Developers</h4>
+                        <p>Simplifies project valuation, compliance, and land acquisition.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-chart-line"></i> For Investors</h4>
+                        <p>Provides verified, data-backed insights for secure investment decisions.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-users"></i> For Citizens</h4>
+                        <p>Enables transparency in property transactions and urban growth.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4><i class="fas fa-city"></i> For Cities</h4>
+                        <p>Promotes smarter infrastructure planning and environmental sustainability.</p>
+                    </div>
+                </div>
+                <p>With BannaAI RealtyTech, every stakeholder — from builders to buyers — gains access to truthful, intelligent real-estate data.</p>
+            </div>
+
+            <!-- Our Values -->
+            <div class="about-section">
+                <h2>Our Values</h2>
+                <div class="section-divider"></div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-eye"></i></div>
+                        <h4>Transparency</h4>
+                        <p>Every property record should be open, accurate, and verifiable.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-brain"></i></div>
+                        <h4>Intelligence</h4>
+                        <p>AI should guide better real-estate decisions, not replace human judgment.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Security</h4>
+                        <p>User trust is built through privacy-first design and strong data protection.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon"><i class="fas fa-leaf"></i></div>
+                        <h4>Sustainability</h4>
+                        <p>Technology should enable greener, more efficient cities.</p>
+                    </div>
+                </div>
+                <p>These principles drive every product, partnership, and line of code we create.</p>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Join Our Mission</h2>
+                <p>We're always looking for passionate minds who want to shape the future of Indian PropTech.<br>If you're a developer, designer, or engineer eager to build something meaningful — join us in creating the foundation for India's intelligent real-estate future.</p>
+                <div class="cta-buttons">
+                    <a href="../index.html#roles" class="cta-btn primary">
+                        <i class="fas fa-briefcase"></i>
+                        <span>View Open Roles</span>
+                    </a>
+                    <a href="../index.html#contact" class="cta-btn secondary">
+                        <i class="fas fa-envelope"></i>
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logo.png" alt="BannaAI RealtyTech" class="footer-logo-img">
+                    <p class="footer-tagline">India's First AI-Driven Real Estate Platform</p>
+                    <p class="footer-description">Bringing transparency and intelligence to India's property markets through cutting-edge AI technology.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-list">
+                        <li><a href="../index.html#home" class="footer-link">Home</a></li>
+                        <li><a href="../index.html#roles" class="footer-link">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-list">
+                        <li><a href="#" class="footer-link">Documentation</a></li>
+                        <li><a href="#" class="footer-link">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-list">
+                        <li><a href="privacy-and-terms.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="privacy-and-terms.html#terms" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">&copy; 2024 BannaAI RealtyTech. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy-and-terms.html" class="footer-bottom-link">Privacy</a>
+                        <span class="footer-divider">•</span>
+                        <a href="privacy-and-terms.html#terms" class="footer-bottom-link">Terms</a>
+                        <span class="footer-divider">•</span>
+                        <a href="../index.html" class="footer-bottom-link">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
