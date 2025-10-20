@@ -123,6 +123,7 @@ Desktop:  > 768px
    ```bash
    # Option 1: Direct file open
    open index.html
+   go live
    
 
    ```
