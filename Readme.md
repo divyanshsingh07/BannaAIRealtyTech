@@ -1,6 +1,6 @@
 # BannaAI RealtyTech - Landing Page
 
-![BannaAI RealtyTech](assets/logo.png)
+![BannaAI RealtyTech](assets/landing.png)
 
 ## 🏠 Overview
 
@@ -124,17 +124,10 @@ Desktop:  > 768px
    # Option 1: Direct file open
    open index.html
    
-   # Option 2: Using Python server
-   python -m http.server 8000
-   
-   # Option 3: Using Node.js
-   npx http-server
+
    ```
 
-3. **Visit the site**
-   ```
-   http://localhost:8000
-   ```
+
 
 ---
 
