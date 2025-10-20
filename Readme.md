@@ -178,7 +178,7 @@ Success Green:   #10b981  •  White: #ffffff
 
 <div align="center">
 
-**Built with ❤️ by BannaAI RealtyTech**
+**Built with ❤️ by Divyansh Singh**
 
 *Ui/Ux design inspired by modern PropTech leaders • Icons by Font Awesome • Typography by Google Fonts*
 
